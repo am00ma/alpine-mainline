@@ -26,16 +26,16 @@ sudo sgdisk -n 1:4096 /dev/loop20
 
 sudo mkfs.ext4 /dev/loop20p1
 # mke2fs 1.47.0 (5-Feb-2023)
-# Discarding device blocks: done                            
+# Discarding device blocks: done
 # Creating filesystem with 523771 4k blocks and 131072 inodes
 # Filesystem UUID: 08b6e682-588d-4713-9217-610bdf799baa
-# Superblock backups stored on blocks: 
+# Superblock backups stored on blocks:
 # 	32768, 98304, 163840, 229376, 294912
 #
-# Allocating group tables: done                            
-# Writing inode tables: done                            
+# Allocating group tables: done
+# Writing inode tables: done
 # Creating journal (8192 blocks): done
-# Writing superblocks and filesystem accounting information: done 
+# Writing superblocks and filesystem accounting information: done
 
 # -----------------------------------------------
 # 4. Copy the Alpine rootfs, kernel image and modules to the ext4 partition
@@ -100,4 +100,3 @@ sudo losetup -d /dev/loop20
 # 8. Write the bootable image to an SD card
 # -----------------------------------------------
 sudo dd if=alpine-rg35xx.img of=/dev/sda bs=4M conv=fsync status=progress
-

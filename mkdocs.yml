@@ -1,0 +1,35 @@
+site_name: alpine-mainline
+dev_addr: '127.0.0.1:5555'
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: terminal
+  features:
+    - footer.prev_next
+    - navigation.side.indexes
+    - revision.date
+    - revision.history
+    - style.links.underline.hide
+
+nav:
+  - Home: 'index.md'
+  - RG35XX:
+    - Apline h700 (mporrato): 'rg35xx/mporrato.md'
+    - Root Image (tokyovigilante): 'rg35xx/tokyovigilante.md'
+    - Root Image rewritten: 'rg35xx/manyids2.md'
+  - R36S:
+    - Alpine: 'r36s-manyids2.md'
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - footnotes
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
